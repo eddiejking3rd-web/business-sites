@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store — Waco Business Solutions</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+        header { text-align: center; padding: 3rem 0 2rem; }
+        header h1 {
+            font-size: 2.5rem; font-weight: 800;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        header p { color: #94a3b8; font-size: 1.1rem; }
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .card {
+            background: #1e293b; border: 1px solid #334155; border-radius: 16px;
+            padding: 2rem; text-align: center; transition: transform 0.2s, border-color 0.2s;
+        }
+        .card:hover { transform: translateY(-4px); border-color: #60a5fa; }
+        .card.featured { border-color: #a78bfa; background: linear-gradient(180deg, #1e293b, #1a1a3e); transform: scale(1.03); }
+        .badge {
+            background: linear-gradient(135deg, #a78bfa, #7c3aed); color: #fff;
+            font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 20px;
+            display: inline-block; margin-bottom: 0.75rem;
+        }
+        .card h2 { font-size: 1.3rem; margin-bottom: 0.5rem; color: #f1f5f9; }
+        .card .price { font-size: 2.5rem; font-weight: 800; color: #60a5fa; margin: 0.75rem 0; }
+        .card.featured .price { color: #c4b5fd; }
+        .card .desc { color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.5rem; }
+        .card ul { list-style: none; text-align: left; margin: 1rem 0; }
+        .card ul li { padding: 0.4rem 0; font-size: 0.9rem; color: #cbd5e1; }
+        .card ul li::before { content: "✓ "; color: #22c55e; font-weight: 700; }
+        .btn {
+            display: inline-block; background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            color: #fff; text-decoration: none; padding: 0.75rem 2rem;
+            border-radius: 10px; font-weight: 600; margin-top: 1rem;
+        }
+        .btn:hover { opacity: 0.9; }
+        .btn.purple { background: linear-gradient(135deg, #a78bfa, #7c3aed); }
+        .footer { text-align: center; color: #475569; font-size: 0.85rem; padding: 3rem 0; }
+        @media (max-width: 600px) { .card.featured { transform: none; } header h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Waco Business Solutions</h1>
+        <p>Get online. Get found. Grow your business.</p>
+    </header>
+    <div class="cards">
+        <div class="card">
+            <h2>Lead Gen Report</h2>
+            <div class="price">$47</div>
+            <div class="desc">Discover who's searching for your services right now</div>
+            <ul>
+                <li>Custom market research for your area</li>
+                <li>Top 20 search terms your customers use</li>
+                <li>Competitor analysis report</li>
+                <li>PDF delivered in 48 hours</li>
+            </ul>
+            <a href="mailto:onlbusi56@gmail.com?subject=Lead%20Gen%20Report%20-%20%2447" class="btn">Get Started</a>
+        </div>
+        <div class="card featured">
+            <span class="badge">Best Value</span>
+            <h2>Premium Bundle</h2>
+            <div class="price">$497</div>
+            <div class="desc">Full website + lead generation — everything you need</div>
+            <ul>
+                <li>Professional 5-page website</li>
+                <li>Mobile-optimized design</li>
+                <li>Custom domain setup</li>
+                <li>Lead Gen Market Report</li>
+                <li>Google Maps listing optimization</li>
+                <li>3 months hosting included</li>
+                <li>Priority support</li>
+            </ul>
+            <a href="mailto:onlbusi56@gmail.com?subject=Premium%20Bundle%20-%20%24497" class="btn purple">Get Started</a>
+        </div>
+        <div class="card">
+            <h2>Local Business Website</h2>
+            <div class="price">$297</div>
+            <div class="desc">A professional website built for your local business</div>
+            <ul>
+                <li>Custom-designed home page</li>
+                <li>Services &amp; about pages</li>
+                <li>Contact form &amp; map</li>
+                <li>Mobile-friendly design</li>
+                <li>Hosted on your own domain</li>
+                <li>Free updates for 30 days</li>
+            </ul>
+            <a href="mailto:onlbusi56@gmail.com?subject=Local%20Business%20Website%20-%20%24297" class="btn">Get Started</a>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Questions? Email <a href="mailto:onlbusi56@gmail.com" style="color:#60a5fa;">onlbusi56@gmail.com</a></p>
+    </div>
+</div>
+</body>
+</html>
