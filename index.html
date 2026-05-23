@@ -356,9 +356,50 @@
         </div>
     </footer>
 
+    <!-- Google tag (gtag.js) - Google Ads conversion tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-CONVERSION_ID');
+    </script>
+
     <script>
         document.getElementById('leadForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const city = document.getElementById('city').value;
+            const message = document.getElementById('message').value;
+            
+            // Send lead via email (Formspree or similar)
+            fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    service: service,
+                    city: city,
+                    message: message,
+                    _subject: 'New Lead - TX United Pros'
+                })
+            }).catch(console.error);
+
+            // Track Google Ads conversion
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+                    'value': 50.0,
+                    'currency': 'USD'
+                });
+            }
+
             const btn = this.querySelector('button');
             const orig = btn.textContent;
             btn.textContent = '✓ Request Sent!';
