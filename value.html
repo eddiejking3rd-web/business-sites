@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Home Valuation | TX Home Seller Pro</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f0f4f8; color: #1a202c; line-height: 1.6; }
+        .container { max-width: 640px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; margin-bottom: 40px; }
+        header h1 { font-size: 32px; color: #2b6cb0; margin-bottom: 8px; }
+        header p { color: #4a5568; font-size: 18px; }
+        .card { background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 24px; }
+        .card h2 { font-size: 22px; margin-bottom: 24px; color: #2d3748; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-weight: 600; font-size: 14px; color: #4a5568; margin-bottom: 6px; }
+        input, select { width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 16px; transition: border-color 0.2s; }
+        input:focus, select:focus { outline: none; border-color: #4299e1; box-shadow: 0 0 0 3px rgba(66,153,225,0.15); }
+        .btn { width: 100%; padding: 16px; background: #48bb78; color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+        .btn:hover { background: #38a169; }
+        .trust { text-align: center; margin-top: 32px; color: #718096; font-size: 14px; }
+        .trust span { display: inline-block; margin: 0 12px; }
+        .notes { background: #ebf8ff; border-radius: 12px; padding: 20px; margin-top: 24px; font-size: 14px; color: #2b6cb0; }
+        .notes strong { display: block; margin-bottom: 4px; }
+        footer { text-align: center; padding: 24px; color: #a0aec0; font-size: 13px; }
+        footer a { color: #4299e1; text-decoration: none; }
+        .row { display: flex; gap: 12px; }
+        .row .form-group { flex: 1; }
+        @media (max-width: 480px) { .row { flex-direction: column; gap: 0; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>🏡 Free Home Valuation</h1>
+        <p>See what your home is worth — no obligation, takes 2 minutes</p>
+    </header>
+
+    <div class="card">
+        <h2>Tell Us About Your Property</h2>
+        <form action="https://formspree.io/f/mzdwglad" method="POST">
+            <input type="hidden" name="_subject" value="🏡 New Home Valuation Request">
+            <input type="hidden" name="source" value="valuation_page">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" name="phone" placeholder="(254) 555-0123" required>
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="john@example.com" required>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" name="city" list="tx-cities" placeholder="e.g. Waco" required>
+                    <datalist id="tx-cities">
+                        <option>Waco</option><option>Austin</option><option>Dallas</option>
+                        <option>Fort Worth</option><option>Houston</option><option>San Antonio</option>
+                        <option>Killeen</option><option>Temple</option>
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <label>ZIP Code</label>
+                    <input type="text" name="zip" placeholder="76701" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Property Type</label>
+                <select name="property_type" required>
+                    <option value="">Select...</option>
+                    <option value="single-family">Single Family Home</option>
+                    <option value="townhouse">Townhouse / Condo</option>
+                    <option value="duplex">Duplex / Multi-Family</option>
+                    <option value="land">Land / Lot</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Estimated Square Footage</label>
+                <input type="number" name="sqft" placeholder="e.g. 1800" required>
+            </div>
+            <div class="form-group">
+                <label>Bedrooms</label>
+                <select name="bedrooms" required>
+                    <option value="">Select...</option>
+                    <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>When Are You Thinking of Selling?</label>
+                <select name="timeline" required>
+                    <option value="">Select...</option>
+                    <option value="1-3 months">1-3 Months</option>
+                    <option value="3-6 months">3-6 Months</option>
+                    <option value="6-12 months">6-12 Months</option>
+                    <option value="just-curious">Just Curious</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Additional Notes</label>
+                <textarea name="notes" rows="3" style="width:100%;padding:14px;border:2px solid #e2e8f0;border-radius:8px;font-size:16px;font-family:inherit" placeholder="Any renovations or special features..."></textarea>
+            </div>
+
+            <button type="submit" class="btn">🔍 Get My Free Valuation</button>
+        </form>
+    </div>
+
+    <div class="trust">
+        <span>🔒 Your info is private</span>
+        <span>⚡ 2-minute form</span>
+        <span>📊 Market data from MLS</span>
+    </div>
+
+    <div class="notes">
+        <strong>📋 What happens next?</strong>
+        A TX Home Seller Pro agent will review your property details and send a comprehensive market analysis within 24 hours. No pushy sales calls — just the facts.
+    </div>
+
+    <footer>
+        TX Home Seller Pro &bull; A TX United Pros Service<br>
+        <a href="https://txunitedpros.com">txunitedpros.com</a>
+    </footer>
+</div>
+</body>
+</html>
