@@ -226,14 +226,26 @@
         }
 
         @media (max-width: 768px) {
+            .hero { padding: 60px 0 50px; }
             .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; max-width: 100%; margin-bottom: 25px; }
             .service-grid { grid-template-columns: 1fr; }
             .city-list { grid-template-columns: 1fr 1fr; }
             nav a { margin-left: 12px; font-size: 0.85rem; }
+            header .container { padding: 0 12px; }
+            .nav-cta { padding: 6px 12px; font-size: 0.8rem; }
         }
         @media (max-width: 480px) {
+            .hero { padding: 40px 0 35px; }
+            .hero h1 { font-size: 1.6rem; }
+            .hero p { font-size: 0.9rem; margin-bottom: 20px; }
+            .hero-cities { gap: 8px; }
+            .hero-cities span { font-size: 0.8rem; padding: 4px 12px; }
+            .btn { padding: 12px 24px; font-size: 0.95rem; }
             .city-list { grid-template-columns: 1fr; }
             .btn-outline { margin-left: 0; margin-top: 12px; display: inline-block; }
+            .hero .btn { display: block; width: 100%; text-align: center; }
+            .hero .btn-outline { margin-top: 10px; }
         }
     </style>
 </head>
