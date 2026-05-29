@@ -232,6 +232,88 @@
             color: #a0aec0;
         }
 
+        /* Partner Section */
+        .partner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            text-align: left;
+        }
+        .partner-card {
+            background: white;
+            padding: 28px 24px;
+            border-radius: 14px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+            border: 1px solid #e8ecf4;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .partner-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        .partner-featured {
+            border: 2px solid #e94560 !important;
+            background: linear-gradient(135deg, #fff 0%, #fff5f7 100%) !important;
+        }
+        .partner-badge {
+            position: absolute;
+            top: -10px;
+            right: 14px;
+            background: #e94560;
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+        .partner-icon { font-size: 2rem; margin-bottom: 10px; }
+        .partner-card h3 { color: #e94560; font-size: 1.15rem; margin-bottom: 8px; }
+        .partner-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .partner-per {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: #888;
+        }
+        .partner-card p { color: #555; margin: 10px 0; font-size: 0.9rem; line-height: 1.4; }
+        .partner-save {
+            color: #38a169;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 6px 0;
+        }
+        .partner-featured .partner-save { color: #e94560; }
+        
+        .partner-cta {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .partner-cta p { color: #555; margin-bottom: 20px; font-size: 0.95rem; }
+        .partner-cta .partner-alt { color: #888; font-size: 0.85rem; margin-top: 14px; }
+        .partner-cta .btn { margin: 0; }
+        
+        @media (max-width: 600px) {
+            .partner-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .partner-card { padding: 20px 16px; }
+            .partner-icon { font-size: 1.5rem; margin-bottom: 6px; }
+            .partner-card h3 { font-size: 1rem; }
+            .partner-price { font-size: 1.5rem; }
+            .partner-per { font-size: 0.75rem; }
+            .partner-card p { font-size: 0.8rem; margin: 6px 0; }
+            .partner-save { font-size: 0.78rem; }
+        }
+        @media (max-width: 400px) {
+            .partner-grid { grid-template-columns: 1fr; }
+        }
+
         @media (max-width: 768px) {
             .hero { padding: 60px 0 50px; }
             .hero h1 { font-size: 2rem; }
@@ -379,37 +461,44 @@
     <!-- Partner Pricing Section -->
     <section class="lead-form" id="partner" style="background:#f0f4ff;">
         <div class="container">
-            <h2>📊 Partner With TX United Pros</h2>
-            <p style="max-width:700px;margin:0 auto 30px;font-size:1.1rem;">We send qualified homeowner leads right to your inbox. Pay per lead — no monthly minimums.</p>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:900px;margin:0 auto 30px;text-align:left;">
-                <div style="background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-                    <h3 style="color:#e94560;margin-bottom:8px;">HVAC Leads</h3>
-                    <p style="font-size:2rem;font-weight:700;color:#1a1a2e;">$30 <span style="font-size:1rem;font-weight:400;color:#666;">/ lead</span></p>
-                    <p style="color:#555;margin:10px 0;">AC repair, furnace install, ductwork</p>
-                    <p style="color:#38a169;font-weight:600;">Save: $250/mo for 10 leads</p>
+            <h2 style="color:#1a1a2e;">📊 Partner With TX United Pros</h2>
+            <p style="max-width:700px;margin:0 auto 30px;font-size:1.1rem;color:#718096;">We send qualified homeowner leads right to your inbox. Pay per lead — no monthly minimums.</p>
+            <div class="partner-grid">
+                <div class="partner-card">
+                    <div class="partner-icon">❄️</div>
+                    <h3>HVAC Leads</h3>
+                    <div class="partner-price">$30 <span class="partner-per">/ lead</span></div>
+                    <p>AC repair, furnace install, ductwork</p>
+                    <div class="partner-save">Save: $250/mo for 10 leads →</div>
                 </div>
-                <div style="background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-                    <h3 style="color:#e94560;margin-bottom:8px;">Contracting Leads</h3>
-                    <p style="font-size:2rem;font-weight:700;color:#1a1a2e;">$40 <span style="font-size:1rem;font-weight:400;color:#666;">/ lead</span></p>
-                    <p style="color:#555;margin:10px 0;">Remodels, additions, roof, foundation</p>
-                    <p style="color:#38a169;font-weight:600;">Save: $350/mo for 10 leads</p>
+                <div class="partner-card">
+                    <div class="partner-icon">🔨</div>
+                    <h3>Contracting Leads</h3>
+                    <div class="partner-price">$40 <span class="partner-per">/ lead</span></div>
+                    <p>Remodels, additions, roof, foundation</p>
+                    <div class="partner-save">Save: $350/mo for 10 leads →</div>
                 </div>
-                <div style="background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-                    <h3 style="color:#e94560;margin-bottom:8px;">Remodeling Leads</h3>
-                    <p style="font-size:2rem;font-weight:700;color:#1a1a2e;">$75 <span style="font-size:1rem;font-weight:400;color:#666;">/ lead</span></p>
-                    <p style="color:#555;margin:10px 0;">Kitchen, bath, full home renovation</p>
-                    <p style="color:#38a169;font-weight:600;">Save: $650/mo for 10 leads</p>
+                <div class="partner-card">
+                    <div class="partner-icon">🏠</div>
+                    <h3>Remodeling Leads</h3>
+                    <div class="partner-price">$75 <span class="partner-per">/ lead</span></div>
+                    <p>Kitchen, bath, full home renovation</p>
+                    <div class="partner-save">Save: $650/mo for 10 leads →</div>
                 </div>
-                <div style="background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);border:2px solid #e94560;">
-                    <h3 style="color:#e94560;margin-bottom:8px;">🚀 Website + Leads</h3>
-                    <p style="font-size:2rem;font-weight:700;color:#1a1a2e;">$750 <span style="font-size:1rem;font-weight:400;color:#666;">/ first month</span></p>
-                    <p style="color:#555;margin:10px 0;">Professional website + 10 leads</p>
-                    <p style="color:#e94560;font-weight:600;">Best value — save $250</p>
+                <div class="partner-card partner-featured">
+                    <div class="partner-badge">BEST VALUE</div>
+                    <div class="partner-icon">🚀</div>
+                    <h3>Website + Leads</h3>
+                    <div class="partner-price">$750 <span class="partner-per">/ first month</span></div>
+                    <p>Professional website + 10 leads</p>
+                    <div class="partner-save">Save $250 — best deal</div>
                 </div>
             </div>
-            <p style="margin-bottom:20px;color:#555;">✅ Pay by card or bank transfer — secure & instant. No subscription required.</p>
-            <a href="/payment.html" class="btn" style="text-decoration:none;display:inline-block;">💰 Buy Your First Lead</a>
-            <p style="margin-top:12px;color:#888;font-size:0.9rem;">Or reply to our email — we'll send a custom payment link.</p>
+            <div class="partner-cta">
+                <p>✅ Pay by card or bank transfer — secure & instant. No subscription required.</p>
+                <a href="/payment.html" class="btn" style="text-decoration:none;display:inline-block;">💰 Buy Your First Lead</a>
+                <p class="partner-alt">Or reply to our email — we'll send a custom payment link.</p>
+            </div>
         </div>
     </section>
 
