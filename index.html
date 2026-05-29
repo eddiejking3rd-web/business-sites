@@ -94,9 +94,16 @@
         .btn-outline {
             background: transparent;
             border: 2px solid #e94560;
-            margin-left: 12px;
         }
         .btn-outline:hover { background: #e94560; }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
 
         /* Services */
         .services {
@@ -235,15 +242,25 @@
             header .container { padding: 0 12px; }
             .nav-cta { padding: 6px 12px; font-size: 0.8rem; }
         }
+        @media (max-width: 600px) {
+            .hero-btns { flex-direction: column; gap: 10px; }
+            .hero-btns .btn,
+            .hero-btns .btn-outline {
+                width: 100%;
+                min-width: 0;
+                margin: 0;
+                text-align: center;
+            }
+        }
         @media (max-width: 480px) {
-            .hero { padding: 40px 0 35px; }
-            .hero h1 { font-size: 1.6rem; margin-bottom: 12px; }
-            .hero p { font-size: 0.9rem; margin-bottom: 20px; }
-            .hero-cities { gap: 6px; margin-bottom: 25px; }
-            .hero-cities span { font-size: 0.8rem; padding: 4px 12px; }
-            .hero .btn { display: block; width: 100%; text-align: center; margin: 0 0 10px 0; padding: 12px 24px; font-size: 0.95rem; }
-            .hero .btn-outline { margin: 0; }
+            .hero { padding: 35px 0 30px; }
+            .hero h1 { font-size: 1.5rem; margin-bottom: 10px; }
+            .hero p { font-size: 0.88rem; margin-bottom: 18px; }
+            .hero-cities { gap: 5px; margin-bottom: 20px; }
+            .hero-cities span { font-size: 0.78rem; padding: 3px 10px; }
             .city-list { grid-template-columns: 1fr; }
+            header .container { flex-direction: column; gap: 8px; }
+            nav a { margin: 0 8px; font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -270,8 +287,10 @@
                 <span>📍 Austin</span>
                 <span>📍 San Antonio</span>
             </div>
-            <a href="#contact" class="btn">Get Your Free Estimate</a>
-            <a href="#services" class="btn btn-outline">See Services ↓</a>
+            <div class="hero-btns">
+                <a href="#contact" class="btn">Get Your Free Estimate</a>
+                <a href="#services" class="btn btn-outline">See Services ↓</a>
+            </div>
         </div>
     </section>
 
