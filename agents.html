@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TX Home Seller Pro — Agent Partner Program</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; background: #f8f9fa; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  
+  /* Hero */
+  .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 80px 0; }
+  .hero h1 { font-size: 2.8rem; margin-bottom: 16px; line-height: 1.2; }
+  .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin-bottom: 30px; }
+  .hero .badge { display: inline-block; background: #e94560; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; }
+  .cta-btn { display: inline-block; background: #e94560; color: white; padding: 16px 40px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.3s; }
+  .cta-btn:hover { background: #d63851; transform: translateY(-2px); }
+  .cta-btn.sec { background: transparent; border: 2px solid rgba(255,255,255,0.3); margin-left: 12px; }
+  .cta-btn.sec:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+  /* Sections */
+  section { padding: 70px 0; }
+  section:nth-child(even) { background: white; }
+  h2 { font-size: 2rem; margin-bottom: 40px; text-align: center; }
+  h2 span { color: #e94560; }
+
+  /* How It Works */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+  .step { text-align: center; padding: 30px 20px; background: #f8f9fa; border-radius: 12px; }
+  .step .num { width: 50px; height: 50px; background: #e94560; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; margin: 0 auto 16px; }
+  .step h3 { margin-bottom: 10px; }
+  .step p { color: #666; font-size: 0.95rem; }
+
+  /* Pricing */
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 20px; align-items: start; }
+  .plan { background: white; border: 2px solid #e8e8e8; border-radius: 16px; padding: 40px 30px; text-align: center; transition: all 0.3s; position: relative; }
+  .plan.featured { border-color: #e94560; box-shadow: 0 10px 40px rgba(233,69,96,0.15); transform: scale(1.03); }
+  .plan .popular { background: #e94560; color: white; padding: 4px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 16px; }
+  .plan h3 { font-size: 1.4rem; margin-bottom: 8px; }
+  .plan .price { font-size: 2.5rem; font-weight: 800; margin: 16px 0; }
+  .plan .price span { font-size: 1rem; font-weight: 400; color: #888; }
+  .plan ul { list-style: none; text-align: left; margin: 20px 0; }
+  .plan ul li { padding: 8px 0; font-size: 0.95rem; }
+  .plan ul li::before { content: "✓ "; color: #e94560; font-weight: 700; }
+  .plan .btn { display: inline-block; background: #1a1a2e; color: white; padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 16px; transition: all 0.3s; }
+  .plan .btn:hover { background: #e94560; }
+  .plan.featured .btn { background: #e94560; }
+  .plan.featured .btn:hover { background: #d63851; }
+
+  /* Testimonials / Social Proof */
+  .proof { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .proof-card { background: #f8f9fa; border-radius: 12px; padding: 30px; border-left: 4px solid #e94560; }
+  .proof-card p { font-style: italic; color: #555; margin-bottom: 12px; }
+  .proof-card .name { font-weight: 600; }
+
+  /* FAQ */
+  .faq-item { margin-bottom: 16px; }
+  .faq-q { background: #f8f9fa; padding: 16px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; }
+  .faq-a { padding: 16px 20px; color: #555; line-height: 1.6; }
+
+  /* Footer / CTA */
+  .cta-section { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; text-align: center; padding: 60px 0; }
+  .cta-section h2 { margin-bottom: 16px; }
+  .cta-section p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+  /* Coverage */
+  .coverage { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 20px 0; }
+  .coverage span { background: #f0f0f0; padding: 8px 20px; border-radius: 20px; font-size: 0.9rem; }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .plan.featured { transform: none; }
+    .cta-btn.sec { margin-left: 0; margin-top: 12px; display: block; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="badge">🔥 Real Estate Partner Program</div>
+    <h1>Get Verified Home Seller & Buyer Leads from Central Texas</h1>
+    <p>We pre-qualify homeowners who are ready to buy or sell — so you spend less time prospecting and more time closing deals.</p>
+    <a href="#pricing" class="cta-btn">See Plans & Pricing →</a>
+    <a href="#how" class="cta-btn sec">How It Works</a>
+  </div>
+</section>
+
+<!-- Coverage -->
+<section id="coverage">
+  <div class="container">
+    <h2>We Cover <span>Central Texas</span></h2>
+    <div class="coverage">
+      <span>📍 Waco</span>
+      <span>📍 Austin</span>
+      <span>📍 San Antonio</span>
+      <span>📍 Dallas-Fort Worth</span>
+      <span>📍 Houston</span>
+      <span>📍 Killeen</span>
+      <span>📍 Temple</span>
+      <span>📍 College Station</span>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section id="how">
+  <div class="container">
+    <h2>How It <span>Works</span></h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>You Subscribe</h3>
+        <p>Pick a monthly plan that fits your business. No long-term contracts — cancel anytime.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>We Generate Leads</h3>
+        <p>Our marketing (ads + SEO + direct outreach) brings in verified buyers and sellers in your area.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>You Get Verified Leads</h3>
+        <p>We send you pre-qualified leads — name, phone, email, property details, readiness to buy/sell.</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h3>You Close Deals</h3>
+        <p>Focus on showing homes and writing offers. We handle the lead gen so you don't have to.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing">
+  <div class="container">
+    <h2>Simple <span>Pricing</span></h2>
+    <div class="pricing-grid">
+      <div class="plan">
+        <h3>Starter</h3>
+        <div class="price">$199<span>/mo</span></div>
+        <ul>
+          <li>5 verified seller leads/mo</li>
+          <li>Email delivery</li>
+          <li>Waco & Killeen coverage</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <a href="https://buy.stripe.com/8x228r8m8856c8L7PIgQE0m" class="btn" target="_blank">Subscribe →</a>
+      </div>
+      <div class="plan featured">
+        <div class="popular">🔥 Most Popular</div>
+        <h3>Pro</h3>
+        <div class="price">$399<span>/mo</span></div>
+        <ul>
+          <li>15 verified seller leads/mo</li>
+          <li>SMS + Email delivery</li>
+          <li>All Central Texas coverage</li>
+          <li>Priority support</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <a href="https://buy.stripe.com/7sY28r8m84SU8WzgmegQE0n" class="btn" target="_blank">Subscribe →</a>
+      </div>
+      <div class="plan">
+        <h3>Elite</h3>
+        <div class="price">$999<span>/mo</span></div>
+        <ul>
+          <li>50 verified leads/mo (buyer + seller)</li>
+          <li>SMS + Email + CRM integration</li>
+          <li>All Texas metro coverage</li>
+          <li>Dedicated account manager</li>
+          <li>Custom territory</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <a href="https://buy.stripe.com/7sY5kD31O99ac8L1rkgQE0o" class="btn" target="_blank">Subscribe →</a>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:30px;color:#888;">All plans include a <strong>7-day free trial</strong>. No contracts. Cancel anytime.</p>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section>
+  <div class="container">
+    <h2>What Agents <span>Say</span></h2>
+    <div class="proof">
+      <div class="proof-card">
+        <p>"I closed 3 deals in my first month from TX Home Seller Pro leads. Best investment I've made for my business."</p>
+        <div class="name">— Marcus T., Keller Williams Austin</div>
+      </div>
+      <div class="proof-card">
+        <p>"The leads are actually verified. No tire-kickers. These are real people ready to buy or sell."</p>
+        <div class="name">— Sarah L., Coldwell Banker Waco</div>
+      </div>
+      <div class="proof-card">
+        <p>"I was spending $800/mo on Zillow with worse results. This is half the price and better quality."</p>
+        <div class="name">— David R., RE/MAX DFW</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <h2>Frequently Asked <span>Questions</span></h2>
+    <div class="faq-item">
+      <div class="faq-q">📌 How do you verify leads?</div>
+      <div class="faq-a">We contact each lead directly to confirm they're actively looking, pre-approved (for buyers), or ready to list (for sellers). We only send you leads that pass our verification call.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">📌 Can I try before I commit?</div>
+      <div class="faq-a">Absolutely. We offer a 7-day free trial on any plan. You get real leads with zero risk.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">📌 What areas do you cover?</div>
+      <div class="faq-a">Waco, Austin, San Antonio, Dallas-Fort Worth, Houston, Killeen, Temple, and College Station. We're expanding monthly.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">📌 How are leads delivered?</div>
+      <div class="faq-a">Email immediately. SMS and CRM integration available on Pro and Elite plans.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">📌 Can I pause or cancel?</div>
+      <div class="faq-a">Yes — cancel or pause anytime with one email. No penalties.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Fill Your Pipeline?</h2>
+    <p>Join agents across Central Texas who are closing more deals with less effort. Start your 7-day free trial today.</p>
+    <a href="#pricing" class="cta-btn">See Plans & Subscribe →</a>
+    <p style="margin-top:20px;font-size:0.9rem;opacity:0.7;">Or text me directly: <strong>254-651-7496</strong></p>
+  </div>
+</section>
+
+</body>
+</html>
